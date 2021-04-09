@@ -6,13 +6,13 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 15:21:30 by treo              #+#    #+#             */
-/*   Updated: 2021/04/09 18:35:26 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/10 07:10:25 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if ('a' <= c && c <= 'z')
 	{
