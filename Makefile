@@ -1,6 +1,7 @@
 NAME	= libft.a
 SRCS	= ft_toupper.c \
-			ft_tolower.c
+			ft_tolower.c \
+			ft_strlen.c
 
 OBJS	= $(SRCS:%.c=%.o)
 CC		= gcc
