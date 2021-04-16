@@ -10,7 +10,8 @@ SRCS	= ft_toupper.c \
 			ft_memmove.c \
 			ft_memchr.c \
 			ft_memcmp.c \
-			ft_strlcat.c
+			ft_strlcat.c \
+			ft_strchr.c
 
 OBJS	= $(SRCS:%.c=%.o)
 CC		= gcc
