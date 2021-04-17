@@ -12,7 +12,8 @@ SRCS	= ft_toupper.c \
 			ft_memcmp.c \
 			ft_strlcat.c \
 			ft_strchr.c \
-			ft_strrchr.c
+			ft_strrchr.c \
+			ft_strnstr.c
 
 OBJS	= $(SRCS:%.c=%.o)
 CC		= gcc
