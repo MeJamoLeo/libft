@@ -16,7 +16,9 @@ SRCS	= ft_toupper.c \
 			ft_strnstr.c \
 			ft_strncmp.c \
 			ft_atoi.c \
-			ft_isalpha.c
+			ft_isalpha.c \
+			ft_isdigit.c \
+			ft_isalnum.c
 
 OBJS	= $(SRCS:%.c=%.o)
 CC		= gcc
