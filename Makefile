@@ -21,7 +21,8 @@ SRCS	= ft_toupper.c \
 			ft_isalnum.c \
 			ft_isascii.c \
 			ft_isprint.c \
-			ft_calloc.c
+			ft_calloc.c \
+			ft_strdup.c
 
 OBJS	= $(SRCS:%.c=%.o)
 CC		= gcc
