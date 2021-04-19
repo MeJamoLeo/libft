@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 11:51:08 by treo              #+#    #+#             */
-/*   Updated: 2021/04/12 14:08:46 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/19 09:25:10 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr;
-	int				i;
-
-	ptr = (unsigned char *)s;
-	i = 0;
-	while (i < (int)n)
-	{
-		*ptr = 0;
-		ptr++;
-		i++;
-	}
+	ft_memset(s, 0, n);
 }
