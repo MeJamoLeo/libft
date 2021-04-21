@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 00:11:40 by treo              #+#    #+#             */
-/*   Updated: 2021/04/20 12:02:37 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/21 12:16:55 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ptr;
 	size_t	s_len;
-	size_t	i;
 
 	if (!s)
 		return (NULL);
