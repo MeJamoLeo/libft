@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 14:39:11 by treo              #+#    #+#             */
-/*   Updated: 2021/04/15 15:05:42 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/22 15:40:22 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	ptr_s = (const unsigned char *)s;
 	uc = (unsigned char)c;
 	i = 0;
-	while(i < n)
+	while (i < n)
 	{
-		if(*(ptr_s + i) == uc)
+		if (*(ptr_s + i) == uc)
 			return ((void *)(s + i));
 		i++;
 	}
