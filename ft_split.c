@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 14:28:59 by treo              #+#    #+#             */
-/*   Updated: 2021/04/22 15:12:05 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/22 15:33:45 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ static int	get_ary_len(char *str, char charset)
 	while (str[i] != '\0')
 	{
 		if (!is_sep(str[i], charset)
-				&& is_sep(str[i + 1], charset))
+			&& is_sep(str[i + 1], charset))
 			count++;
 		i++;
 	}
 	return (count);
 }
 
-static char **malloc_error(char **s_ary)
+static char	**malloc_error(char **s_ary)
 {
 	while (*s_ary)
 		free(*(s_ary++));
@@ -66,7 +66,8 @@ static char	**fill_ary(char *str, char **heap, char charset)
 		{
 			while (!is_sep(str[j], charset))
 				j++;
-			if(!(heap[k] = (char *)malloc(sizeof(char) * (j - i + 1))))
+			heap[k] = (char *)malloc(sizeof(char) * (j - i + 1));
+			if (!heap[k])
 				return (malloc_error(heap));
 			ft_strlcpy(heap[k], &str[i], j - i + 1);
 			i = j;
