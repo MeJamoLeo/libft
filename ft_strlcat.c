@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/15 15:27:02 by treo              #+#    #+#             */
-/*   Updated: 2021/04/22 22:55:02 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/22 23:32:54 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (ft_strlen(src) + dstsize);
 	i = 0;
 	j = ft_strlen(dst);
-	while (j + i < dstsize - 1)
+	while (j + i < dstsize - 1 && *(src + i) != '\0')
 	{
 		*(dst + i + j) = *(src + i);
 		i++;
