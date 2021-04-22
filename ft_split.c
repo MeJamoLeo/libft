@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 14:28:59 by treo              #+#    #+#             */
-/*   Updated: 2021/04/22 14:27:12 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/22 15:12:05 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,19 @@ static int	get_ary_len(char *str, char charset)
 	while (str[i] != '\0')
 	{
 		if (!is_sep(str[i], charset)
-			&& is_sep(str[i + 1], charset))
+				&& is_sep(str[i + 1], charset))
 			count++;
 		i++;
 	}
 	return (count);
+}
+
+static char **malloc_error(char **s_ary)
+{
+	while (*s_ary)
+		free(*(s_ary++));
+	free(s_ary);
+	return (NULL);
 }
 
 static char	**fill_ary(char *str, char **heap, char charset)
@@ -53,15 +61,13 @@ static char	**fill_ary(char *str, char **heap, char charset)
 	{
 		j = i;
 		if (is_sep(str[i], charset))
-		{
-			i++;
-			j = i;
-		}
+			j = ++i;
 		else
 		{
 			while (!is_sep(str[j], charset))
 				j++;
-			heap[k] = (char *)malloc(sizeof(char) * (j - i + 1));
+			if(!(heap[k] = (char *)malloc(sizeof(char) * (j - i + 1))))
+				return (malloc_error(heap));
 			ft_strlcpy(heap[k], &str[i], j - i + 1);
 			i = j;
 			k++;
@@ -84,3 +90,4 @@ char	**ft_split(char const *s, char c)
 	res = fill_ary((char *)s, res, c);
 	res[len] = 0;
 	return (res);
+}
