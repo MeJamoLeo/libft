@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 14:47:22 by treo              #+#    #+#             */
-/*   Updated: 2021/04/22 18:22:17 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/22 18:24:40 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ static char	*fill_string(char *dst, int n, unsigned int s_len)
 		*(dst) = '-';
 	*(dst + ft_strlen(dst)) = '\0';
 	return (dst);
-
 }
 
 static int	digit_count(unsigned int n)
 {
 	int	i;
+
 	while (n >= 10)
 	{
 		n /= 10;
@@ -45,9 +45,9 @@ static int	digit_count(unsigned int n)
 
 char	*ft_itoa(int n)
 {
-	int	s_len;
-	int	tmp;
-	char *ptr;
+	int		s_len;
+	int		tmp;
+	char	*ptr;
 
 	s_len = 0;
 	tmp = n;
@@ -55,7 +55,7 @@ char	*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	if (tmp < 0)
 	{
-		tmp *= - 1;
+		tmp *= -1;
 		s_len += 1;
 	}
 	s_len += digit_count(tmp);
