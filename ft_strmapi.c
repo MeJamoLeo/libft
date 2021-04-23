@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 18:28:36 by treo              #+#    #+#             */
-/*   Updated: 2021/04/23 13:03:57 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/23 18:18:17 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*ptr;
 
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	ptr = ft_calloc(len + 1, sizeof(char));
 	if (!ptr)
