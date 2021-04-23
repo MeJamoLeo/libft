@@ -34,7 +34,9 @@ SRCS	= ft_toupper.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
+B_SRCS	= ft_lstnew.c
 OBJS	= $(SRCS:%.c=%.o)
+B_OBJS	= $(B_SRCS:%.c=%.o)
 CC		= gcc
 CFCLAGS	= -Wall -Wextra -Werror -I. -c
 RM		= rm -f
@@ -46,16 +48,20 @@ all:	$(NAME)
 
 $(NAME):	$(OBJS)
 	ar rc $(NAME) $(OBJS)
+bonus:	$(OBJS) $(B_OBJS)
+	ar rc $(NAME) $(OBJS) $(B_OBJS)
 
 $(OBJS):
 	$(CC) $(CFCLAGS) $(SRCS)
+$(B_OBJS):
+	$(CC) $(CFCLAGS) $(B_SRCS)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(B_OBJS)
 
 fclean:		clean
 	$(RM) $(NAME)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus
