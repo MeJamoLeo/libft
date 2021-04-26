@@ -57,7 +57,7 @@ all:	$(NAME)
 
 $(NAME):	$(OBJS)
 	ar rc $(NAME) $(OBJS)
-bonus:	 $(B_OBJS)
+bonus:	 all $(B_OBJS)
 	ar rc $(NAME) $(B_OBJS)
 
 $(OBJS):
