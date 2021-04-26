@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 13:44:11 by treo              #+#    #+#             */
-/*   Updated: 2021/04/21 13:55:57 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/26 13:19:29 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (is_contain(*(s1 + start), (char *)set))
 		start++;
 	if (start == ft_strlen(s1))
-	{
-		rtn = ft_strdup("");
-		if (rtn)
-			return (rtn);
-		return (NULL);
-	}
+		return (ft_strdup(""));
 	while (is_contain(*(s1 + end - 1), (char *)set))
 		end--;
 	rtn = ft_substr(s1, start, end - start);

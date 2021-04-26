@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 14:28:59 by treo              #+#    #+#             */
-/*   Updated: 2021/04/22 15:33:45 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/25 22:40:08 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ static char	**fill_ary(char *str, char **heap, char charset)
 			k++;
 		}
 	}
+	heap[k] = 0;
 	return (heap);
 }
 
@@ -82,13 +83,10 @@ char	**ft_split(char const *s, char c)
 	int		len;
 	char	**res;
 
-	if (s == NULL)
-		return (NULL);
 	len = get_ary_len((char *)s, c);
 	res = ft_calloc(len + 1, sizeof(char *));
 	if (res == NULL)
 		return (NULL);
 	res = fill_ary((char *)s, res, c);
-	res[len] = 0;
 	return (res);
 }

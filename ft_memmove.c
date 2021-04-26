@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 16:45:05 by treo              #+#    #+#             */
-/*   Updated: 2021/04/15 14:34:39 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/26 12:12:09 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	*rev_memcpy(void *dst, const void *src, size_t n)
 	ptr_d = dst + n - 1;
 	ptr_s = src + n - 1;
 	if (dst == NULL && src == NULL)
-		return (0);
+		return (NULL);
 	while (n--)
 		*ptr_d-- = *ptr_s--;
 	return (dst);

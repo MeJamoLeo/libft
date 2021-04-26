@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 19:03:56 by treo              #+#    #+#             */
-/*   Updated: 2021/04/15 12:29:32 by treo             ###   ########.fr       */
+/*   Updated: 2021/04/26 12:13:44 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	d = dst;
 	s = src;
 	if (dst == NULL && src == NULL)
-		return (0);
+		return (NULL);
 	while (n--)
 		*d++ = *s++;
 	return (dst);
