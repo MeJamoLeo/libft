@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 17:01:37 by treo              #+#    #+#             */
-/*   Updated: 2021/04/19 06:30:45 by treo             ###   ########.fr       */
+/*   Updated: 2021/05/24 09:34:31 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ static int	ft_isover(long long res, long long next_num)
 	long long	ov_div;
 	long long	ov_mod;
 
-	ov_div = LONG_LONG_MAX / 10;
-	ov_mod = LONG_LONG_MAX % 10;
+	ov_div = LLONG_MAX / 10;
+	ov_mod = LLONG_MAX % 10;
 	if (res > ov_div)
 		return (1);
 	if ((res == ov_div) && (next_num > ov_mod))

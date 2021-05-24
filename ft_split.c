@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 14:28:59 by treo              #+#    #+#             */
-/*   Updated: 2021/04/25 22:40:08 by treo             ###   ########.fr       */
+/*   Updated: 2021/05/24 09:35:06 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 static int	is_sep(char x, char charset)
 {
-	int	i;
-
-	i = 0;
 	if (x == '\0')
 		return (1);
 	if (charset == x)

@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 14:47:22 by treo              #+#    #+#             */
-/*   Updated: 2021/04/22 21:17:14 by treo             ###   ########.fr       */
+/*   Updated: 2021/05/24 09:35:50 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 static char	*fill_string(char *dst, int n, unsigned int s_len)
 {
-	int	tmp;
-
-	tmp = n;
 	if (n < 0)
 	{
 		n *= -1;
