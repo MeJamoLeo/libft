@@ -6,7 +6,7 @@
 /*   By: treo <treo@student.42tokyo.jp>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 14:47:22 by treo              #+#    #+#             */
-/*   Updated: 2021/05/24 09:35:50 by treo             ###   ########.fr       */
+/*   Updated: 2021/05/30 14:17:19 by treo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_itoa(int n)
 		s_len += 1;
 	}
 	s_len += digit_count(tmp);
-	ptr = ft_calloc(s_len + 1, sizeof(char));
+	ptr = malloc(sizeof(char) * s_len + 1);
 	if (!ptr)
 		return (NULL);
 	fill_string(ptr, n, s_len);
